@@ -1,0 +1,14 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.fade-enter-active[data-v-730cf4ab], .fade-leave-active[data-v-730cf4ab] {
+  transition: opacity .5s;
+}
+.fade-enter[data-v-730cf4ab], .fade-leave-to[data-v-730cf4ab] {
+  opacity: 0;
+}
+

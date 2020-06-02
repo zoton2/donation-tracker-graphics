@@ -115,6 +115,6 @@ dist
 .pnp.*
 
 # Built files
-/dashboard/
-/extension/
-/graphics/
+#/dashboard/
+#/extension/
+#/graphics/

@@ -2,12 +2,8 @@
 
 import Vue from 'vue';
 import App from './main.vue';
-import waitForReplicants from './store';
 
-waitForReplicants().then((store) => {
-  new Vue({
-    store,
-    el: '#App',
-    render: (h) => h(App),
-  });
+new Vue({
+  el: '#App',
+  render: (h) => h(App),
 });

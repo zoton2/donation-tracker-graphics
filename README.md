@@ -1,4 +1,4 @@
-# nodecg-vue-ts-template
+# donation-tracker-graphics
 Template for NodeCG bundles that use Vue.js and TypeScript.
 
 

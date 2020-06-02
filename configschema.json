@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "trackerURL": {
+      "type": "string"
+    },
+    "repeater": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    },
+    "eventShort": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "trackerURL",
+    "repeater",
+    "eventShort"
+  ]
+}

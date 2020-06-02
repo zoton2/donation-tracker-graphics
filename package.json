@@ -1,14 +1,14 @@
 {
-  "name": "nodecg-vue-ts-template",
+  "name": "donation-tracker-graphics",
   "version": "1.0.0",
   "description": "Template for NodeCG bundles that use Vue.js and TypeScript.",
-  "homepage": "https://github.com/zoton2/nodecg-vue-ts-template#readme",
+  "homepage": "https://github.com/zoton2/donation-tracker-graphics#readme",
   "bugs": {
-    "url": "https://github.com/zoton2/nodecg-vue-ts-template/issues"
+    "url": "https://github.com/zoton2/donation-tracker-graphics/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zoton2/nodecg-vue-ts-template.git"
+    "url": "git+https://github.com/zoton2/donation-tracker-graphics.git"
   },
   "license": "MIT",
   "author": "zoton2",
@@ -26,9 +26,14 @@
     "watch:browser": "webpack -w",
     "watch:extension": "tsc -b tsconfig.extension.json -w"
   },
+  "dependencies": {
+    "needle": "^2.5.0",
+    "socket.io-client": "^2.3.0"
+  },
   "devDependencies": {
     "@mdi/font": "^5.3.45",
     "@types/clone": "^0.1.30",
+    "@types/needle": "^2.0.4",
     "@typescript-eslint/eslint-plugin": "^3.1.0",
     "@typescript-eslint/parser": "^3.1.0",
     "@vue/component-compiler-utils": "^3.1.2",
@@ -72,16 +77,14 @@
   },
   "nodecg": {
     "compatibleRange": "^1.6.0",
-    "dashboardPanels": [
-      {
-        "name": "example",
-        "title": "Example",
-        "file": "example.html"
-      }
-    ],
     "graphics": [
       {
-        "file": "example.html",
+        "file": "ticker.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "total.html",
         "width": 1920,
         "height": 1080
       }

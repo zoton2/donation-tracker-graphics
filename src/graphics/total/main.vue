@@ -28,7 +28,7 @@
 import { Vue, Component, Watch } from 'vue-property-decorator';
 import { State } from 'vuex-class';
 import { Total } from 'schemas';
-import { TweenLite, Linear } from 'gsap';
+import { gsap } from 'gsap';
 
 @Component
 export default class extends Vue {
@@ -41,14 +41,14 @@ export default class extends Vue {
 
   @Watch('totalState')
   onTotalChange(newVal: Total, oldVal: Total): void {
-    TweenLite.to({ total: oldVal }, 1, {
+    gsap.to({ total: oldVal }, {
       total: newVal,
-      ease: Linear.easeNone,
-      onUpdateParams: ['{self}'],
-      onUpdate: (self: { target: { total: number }}) => {
-        this.tweened = self.target.total;
+      ease: 'none',
+      onUpdateParams: [this],
+      onUpdate(vue) {
+        Vue.set(vue, 'tweened', this.targets()[0].total);
       },
-    });
+    }).duration(1);
   }
   get total(): string {
     return `$${this.tweened.toLocaleString('en-US', { maximumFractionDigits: 0 })}`;

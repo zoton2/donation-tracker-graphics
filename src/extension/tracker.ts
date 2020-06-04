@@ -34,7 +34,7 @@ async function updateDontationTotalFromAPI(): Promise<void> {
     }
     const amount = resp.body.agg.amount ? parseFloat(resp.body.agg.amount) : 0;
     if (total.value !== amount) {
-      nodecg().log.info(`API donation total changed: $${total}`);
+      nodecg().log.info(`API donation total changed: $${amount}`);
     }
     total.value = amount;
   } catch (err) {

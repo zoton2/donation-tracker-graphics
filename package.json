@@ -50,7 +50,7 @@
     "file-loader": "^6.0.0",
     "fork-ts-checker-webpack-plugin": "^4.1.6",
     "globby": "^11.0.1",
-    "gsap": "~3.2.6",
+    "gsap": "~3.6.0",
     "hard-source-webpack-plugin": "^0.13.1",
     "html-webpack-plugin": "^4.3.0",
     "json-schema-to-typescript": "^9.1.0",
